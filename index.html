@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of Triangle Calculator</title>
+</head>
+<body>
+    <script>
+        function determineTriangle(sidea,sideb,sidec) {
+            if (sidea === sideb && sideb === sidec) {
+                window.alert("The triangle is EQUILATERAL.");
+            } else if (sidea === sideb || sideb === sidec || sidea === sidec) {
+                window.alert("The triangle is ISOSCELES.");
+            } else {
+                window.alert("The triangle is SCALENE.");
+            }
+        }
+
+        entera = 0;
+        enterb = 0;
+        enterc = 0;
+
+        while (entera === 0) {
+            var a = prompt("Enter the measurement of the first side: ");
+            if (isNaN(a)) {
+                window.alert("The value you have entered is not a number. Please try again.");
+                entera = 0;
+            } else {
+                entera = 1;
+            }
+        }
+
+        while (enterb === 0) {
+            var b = prompt("Enter the measurement of the second side: ");
+            if (isNaN(b)) {
+                window.alert("The value you have entered is not a number. Please try again.");
+                enterb = 0;
+            } else {
+                enterb = 1;
+            }
+        }
+
+        while (enterc === 0) {
+            var c = prompt("Enter the measurement of the third side: ");
+            if (isNaN(c)) {
+                window.alert("The value you have entered is not a number. Please try again.");
+                enterc = 0;
+            } else {
+                enterc = 1;
+            }
+        }
+
+        determineTriangle(a,b,c);
+    </script>
+</body>
+</html>
